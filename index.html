@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<head>
+<!-- 2014-2015 copyright (c) by bigbigworld
+     version 2.0 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>1365 的神奇 2048</title>
+	<link rel="stylesheet" href="1365s2048.css" type="text/css" charset="utf-8" />
+	<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="quo.js"></script>
+	<script type="text/javascript" src="1365s2048.js"></script>
+	<link href="img/shortcut.png" rel="shortcut icon">
+	<meta name="title" content="1365 的神奇 2048" />
+	<meta name="description" content="想了解1365? 那就玩這糞GAME吧!" />
+	<link rel="image_src" type="image/png" href="img/icon_big.png" />
+</head>
+<body class="" style="background-color: #3F2C36;">
+	<div id="main" class="main welcome">
+		<div class="threeD">
+			<div class="threeD_inside">
+				<div class="game">
+				<!--
+					<div class="game_content_control">
+						<div id="game_content_left"></div>
+						<div id="game_content_right"></div>
+						<div id="game_content_up"></div>
+						<div id="game_content_down"></div>
+					</div>
+				-->
+					<div class="score">
+						<div class="card">
+							<div class="card_inside">
+								<div id="card_1" class="have"></div>
+								<div id="card_2" class="have"></div>
+								<div id="card_3"></div>
+								<div id="card_4"></div>
+								<div id="card_5"></div>
+								<div id="card_6"></div>
+								<div id="card_7"></div>
+								<div id="card_8"></div>
+								<div id="card_9"></div>
+								<div id="card_10"></div>
+								<div id="card_11"></div>
+								<div id="card_12"></div>
+								<div id="card_13"></div>
+								<div id="card_14"></div>
+								<div id="card_15"></div>
+								<div id="card_16"></div>
+								<div id="card_17"></div>
+							</div>
+						</div>
+						<div class="scoreTable">
+							<p id="nowScore" class="nowScore">000000</p>
+							<p class="bestScore">BEST SCORE: <span id="bestScore" title="請允許本網站存取 cookie ，以便紀錄您的最高分和已可看到的卡牌。">我好想告訴你</span></span></p>
+						</div>
+					</div>
+					<div class="game" id="game">
+						<div class="game_inside">
+							<div id="game_card_0"></div>
+							<div id="game_card_1"></div>
+							<div id="game_card_2"></div>
+							<div id="game_card_3"></div>
+							<div id="game_card_4"></div>
+							<div id="game_card_5"></div>
+							<div id="game_card_6"></div>
+							<div id="game_card_7"></div>
+							<div id="game_card_8"></div>
+							<div id="game_card_9"></div>
+							<div id="game_card_10"></div>
+							<div id="game_card_11"></div>
+							<div id="game_card_12"></div>
+							<div id="game_card_13"></div>
+							<div id="game_card_14"></div>
+							<div id="game_card_15"></div>
+						</div>
+					</div>
+					<div class="footer">
+						<span>v2 2014-2015 copyright &copy; by <a href="mailto:bigbigworld253@gmail.com" title="bigbigworld's email">bigbigworld</a></span>
+						<div id="about_this_game" class="footer_link" title="關於這個遊戲">關於</div>
+						<div id="help" class="footer_link" title="遊戲說明">遊戲說明</div>
+						<div id="restart" class="footer_link" title="重新開始">重新開始</div>
+					</div>
+				</div>
+				<div class="welcome">
+					<div class="header">
+						<div class="light"></div>
+						<div class="logo"></div>
+						<h1>1365 的神奇 2048</h1>
+					</div>
+					<div class="article">
+						<p><br>這遊戲是關於師大附中 1365 班的輝煌事蹟以及許多特殊的班梗。</p><p>希望大家玩過這遊戲可以對 1365 有更深的認識，<br />更希望 1365 班的同學玩過後別嘴我。</p>
+						<hr />
+						<h2>遊戲說明</h2>
+						<p>請使用「上下左右」鍵來控制。</p>
+						<p>上方的那個類似表格的是指說你已經做到了哪些方塊，可以點進去看簡介。</p>
+						<p>謝謝大家！</p>
+						<p>2014 copyright by <a href="mailto:bigbigworld253@gmail.com" title="bigbigworld's email">bigbigworld</a></p>
+						<p>Use <a href="https://www.google.com/intl/zh-TW/chrome/browser/" title="前往 Google Chrome 下載頁面">Google Chrome</a> or <a href="https://www.mozilla.org/zh-TW/firefox/new/">Firefox</a> for the best experience.</p>
+						<noscript><br><p style="float:right;">你沒有開JS是想要怎麼玩？</p></noscript>
+					</div>
+					<div class="footer">
+						<div title="開始囉" id="popup_about_ok" >>>>>> Let's go!! >>>>></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="popup_about" class="popup">
+		<div class="window">
+			<div class="header">
+				<h2>關於這個遊戲...</h2>
+				<h1>1365 的神奇 2048</h1>
+				<div class="logo"></div>
+			</div>
+			<div class="article">
+				<p>Version 2.0; 2014-2015 copyright &copy; by <a href="mailto:bigbigworld253@gmail.com" title="bigbigworld's email">bigbigworld</a></p>
+				<p>Use <a href="https://www.google.com/intl/zh-TW/chrome/browser/" title="前往 Google Chrome 下載頁面">Google Chrome</a> for the best experience.</p>
+				<hr />
+				<p>今天，我要特別感謝...</p>
+				<div class="more">
+					<ul>
+						<li>李哲安：<br />感謝你花了兩個小時以上幫我的程式碼挑出一個錯誤：多加一個加號...<br />也感謝你幫我設計了"1365的神奇2048"的圖示還有讓這遊戲更臻完美。</li>
+						<li>辜立維：<br />海，海海海？海海海。</li>
+						<li>葉政勳：<br />蝦蝦。</li>
+						<li>梁世霖：<br />感謝你願意跟我握手。</li>
+						<li>莊恆睿：<br />你畫的怪鳥真的是太神啦！！</li>
+						<li>吳翰林：<br />果然綜藝咖。你看到你的號碼了嗎？</li>
+						<li>陳為昕：<br />謝謝你每次都最支持我！</li>
+						<li>白潔錚老師（<b style="text-decoration: underline;">自稱</b>附中瑤瑤）：<br />偷偷跟你說，我很喜歡翻人家舊照。</li>
+						<li>陳玲玲老師：<br />謝謝老師平時的教導。</li>
+						<li>1365班全體：<br />謝謝大家讓我成長這麼多，也帶給我這麼多快樂！！</li>
+						<li style="text-align: center;"><br />And...<br /><br />YOU!!</li>
+						<li>bigbigworld：<br />感謝你花了四個放學之後的時間完成這個遊戲。<br /></li>
+						<li>詳細資訊：<br />HTML（超文件標示語言）、CSS（層疊樣式表）由 bigbigworld 製作。<br />JavaScript 由 bigbigworld 規劃結構及完成基礎函數， 李哲安 協助偵錯。<br />JQuery, QUO 函數庫版權請參閱其官網之相關版權文件。<br />圖片之版權已盡全力取得其著作權人之使用同意，若著作權人看到，請盡速與 bigbigworld 聯絡。</li>
+					</ul>
+				</div>
+				<p style="text-align: right;">...他們發揮附中的精神，我們要向他們學習。</p>
+			</div>
+			<div class="footer">
+				<div title="關閉" id="popup_about_ok" >好。</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="popup_die" class="popup">
+		<div class="window">
+			<div class="header">
+				<h1>阿...你二了...</h1>
+			</div>
+			<div class="article">
+				<div style="float: right; width: 150px; margin-top: 10px;">
+					<p>你的最佳方塊：</p>
+					<div id="game_card_best"></div>
+				</div>
+				<p>你的分數：</p>
+				<p id="nowScore" class="nowScore">000000</p>
+				<p class="bestScore">你的最高分：</p>
+				<p class="best_score"><span id="bestScore"><a href="" title="請允許本網站存取 cookie ，以便紀錄您的最高分和已可看到的卡牌。">無法顯示</a></span></p>
+				<p class=""><br /><br /><br /><br />備註：標題的梗請參閱第一個方塊的介紹。</p>
+			</div>
+			<div class="footer">
+				<div id="restart_and_close" title="重新開始">我想要再二一次</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="popup_card" class="popup">
+		<div class="window">
+			<div class="card_table">
+				<div id="card_table_bye" title="關閉">掰。</div>
+				<div id="card_table_1" class="have"></div>
+				<div id="card_table_2" class="have"></div>
+				<div id="card_table_3"></div>
+				<div id="card_table_4"></div>
+				<div id="card_table_5"></div>
+				<div id="card_table_6"></div>
+				<div id="card_table_7"></div>
+				<div id="card_table_8"></div>
+				<div id="card_table_9"></div>
+				<div id="card_table_10"></div>
+				<div id="card_table_11"></div>
+				<div id="card_table_12"></div>
+				<div id="card_table_13"></div>
+				<div id="card_table_14"></div>
+				<div id="card_table_15"></div>
+				<div id="card_table_16"></div>
+				<div id="card_table_17"></div>
+			</div>
+			<div id="card_content" class="card_content" style="margin-left: 0px;">
+				<div class="card_content_control">
+					<div id="card_content_left" hidden="hidden"></div>
+					<div id="card_content_right"></div>
+				</div>
+				<div id="card_content_inside" class="card_content_inside">
+					<div id="card_content_1" class="select">
+						<p>2</p>
+						<div id="card_content_inside_1" class="content">
+<div class="pic card_1"></div><h1>二貨</h1><p>二貨：也簡稱“二”，四川人稱“二桿子”、北方人稱“二楞子”、“二逼”“二”；西北人稱“二球”。</p>
+<p>二貨不單純是罵人，也是一個很恰當的形容詞，形容智商較低，總做傻事的一類人。還有就是一些青年人的自嘲，比如二貨青年，二貨樓主等等。</p><p>造句：有一些 1365 的人是二貨。</p><p>下圖即為二貨。</p><img class="right" src="img/2_two.JPG" width="324" height="448" alt="IMG_2486"><p class="pic_from">圖片來源： <a href="http://www.kukaishodo.jp/search/digitalkanji/%E4%BA%8C.gif">http://www.kukaishodo.jp/</a>, bigbigworld<br />資料來源： <a href="http://www.baike.com/wiki/%E4%BA%8C%E8%B4%A7">http://www.baike.com/</a></p>
+						</div>
+					</div>
+					<div id="card_content_2">
+						<p>4</p>
+						<div id="card_content_inside_2" class="content">
+<div class="pic card_2"></div><h1>1365 班</h1><p>師大附中 1365班。</p><p>全班有部分是二貨，部分很豪小，部分非常頹廢，部分是肥宅，部分是癡漢，部分是海蛤，部分是蝦，全都在老黑鮑的管制下，生活在海裡。</p><p class="pic_from">圖片作者： 李哲安</p>
+						</div>
+					</div>
+					<div id="card_content_3">
+						<p>8</p>
+						<div id="card_content_inside_3" class="content have_not">
+							<p>你還不能看到這張 8 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_4">
+						<p>16</p>
+						<div id="card_content_inside_4" class="content have_not">
+							<p>你還不能看到這張 16 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_5">
+						<p>32</p>
+						<div id="card_content_inside_5" class="content have_not">
+							<p>你還不能看到這張 32 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_6">
+						<p>64</p>
+						<div id="card_content_inside_6" class="content have_not">
+							<p>你還不能看到這張 64 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+
+						</div>
+					</div>
+					<div id="card_content_7">
+						<p>128</p>
+						<div id="card_content_inside_7" class="content have_not">
+							<p>你還不能看到這張 128 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_8">
+						<p>256</p>
+						<div id="card_content_inside_8" class="content have_not">
+							<p>你還不能看到這張 256 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_9">
+						<p>512</p>
+						<div id="card_content_inside_9" class="content have_not">
+							<p>你還不能看到這張 512 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_10">
+						<p>1024</p>
+						<div id="card_content_inside_10" class="content have_not">
+							<p>你還不能看到這張 1024 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_11">
+						<p>2048</p>
+						<div id="card_content_inside_11" class="content have_not">
+							<p>你還不能看到這張 2048 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_12">
+						<p>4096</p>
+						<div id="card_content_inside_12" class="content have_not">
+							<p>你還不能看到這張 4096 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_13">
+						<p>8192</p>
+						<div id="card_content_inside_13" class="content have_not">
+							<p>你還不能看到這張 8192 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_14">
+						<p>16384</p>
+						<div id="card_content_inside_14" class="content have_not">
+							<p>你還不能看到這張 16384 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_15">
+						<p>32768</p>
+						<div id="card_content_inside_15" class="content have_not">
+							<p>你還不能看到這張 32768 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_16">
+						<p>65536</p>
+						<div id="card_content_inside_16" class="content have_not">
+							<p>你還不能看到這張 65536 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+					<div id="card_content_17">
+						<p>131072</p>
+						<div id="card_content_inside_17" class="content have_not">
+							<p>你還不能看到這張 131072 卡片的簡介喔！<br />趕快加油，當你做出這張卡片時就能看到了！</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="popup_help" class="popup">
+		<div class="window">
+			<div class="header">
+				<h2>1365 的神奇 2048</h2>
+				<h1>遊戲說明</h1>
+				<div class="logo"></div>
+			</div>
+			<div class="article">
+				<p>請使用「上下左右」鍵來控制。</p>
+				<p>或是在螢幕上上下左右滑動，你懂的。</p>
+				<p>上面的那個類似表格的是指說你已經做到了哪些方塊，可以點進去看簡介。</p>
+				<p>就這樣。</p>
+				<hr />
+				<p>還有，請盡量使用 <a href="https://www.google.com/intl/zh-TW/chrome/browser/" title="前往 Google Chrome 下載頁面">Google Chrome</a> 或 <a href="https://www.mozilla.org/zh-TW/firefox/new/">Firefox</a> 來玩這個遊戲，我不是在幫他們打廣告，是因為很多特效是只有他們的瀏覽器才有支援（反正就是不要IE喇．．．）</p>
+				<p>最後，如果你對這個遊戲很有想法，或是你發現有個錯誤，都歡迎你寄一封 email 到 <a href="mailto:bigbigworld253@gmail.com" title="bigbigworld's email">bigbigworld</a> 的信箱。</p>
+				<p>謝謝大家！</p>
+			</div>
+			<div class="footer">
+				<div title="關閉" id="popup_about_ok" >Yooooooooooooooooo~</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="popup_retry_doublecheck" class="popup">
+		<div class="window">
+			<div class="header">
+				<h2>1365 的神奇 2048</h2>
+				<h1>你確定要重開一局?</h1>
+				<div class="logo"></div>
+			</div>
+			<div class="article">
+				<br />
+				<br />
+				<br />
+				<p>看在路西法的面子上，就再姑且問一次。</p>
+				<p>你真的真的真的確定要重來一次？</p>
+				<div title="讓我回去" id="popup_retry_no"  class="doublecheck_button">Oh, no! 讓我回去~</div>
+			</div>
+			<div class="footer">
+				<div title="重開" id="popup_retry_yes" class="doublecheck_button">打掉重練</div>
+			</div>
+		</div>
+	</div>
+</body>
